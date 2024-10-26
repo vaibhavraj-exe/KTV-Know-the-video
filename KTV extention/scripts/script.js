@@ -37,7 +37,7 @@ fetch(apiUrl + `?video_url=${dataToSend.video_url}`, { // `${apiUrl}/predict
     whiteBox.style.backgroundColor = "white";
     whiteBox.style.width = "100vw";
     whiteBox.style.height = "10px";
-    whiteBox.style.background = `linear-gradient(to right, #3aa159 0%, #3aa159 ${resultData.percentages[1]}%, #3aaec8 ${resultData.percentages[1]}%, #3aaec8 ${resultData.percentages[2]}%, #e1797a ${resultData.percentages[2]}%, #e1797a 100%)`;
+    whiteBox.style.background = `linear-gradient(to right, #3aa159 0%, #3aa159 ${resultData.percentages[1]}%, #3aaec8 ${resultData.percentages[1]}%, #3aaec8 ${resultData.percentages[1]+resultData.percentages[2]}%, #e1797a ${resultData.percentages[1]+resultData.percentages[2]}%, #e1797a 100%)`;
     target.appendChild(whiteBox);
   })
   .catch(error => console.error('Error:', error));
@@ -75,3 +75,11 @@ fetch(apiUrl + `?video_url=${dataToSend.video_url}`, { // `${apiUrl}/predict
   };
 
   // export {resultData};
+
+
+
+  // chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  //   if (request.message === "get_current_url") {
+  //     sendResponse({ url: window.location.href });
+  //   }
+  // });

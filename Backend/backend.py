@@ -9,7 +9,6 @@ from enum import Enum
 
 app = FastAPI()
 
-# Allow all origins for demonstration purposes. In a production environment, you should specify your frontend's domain.
 origins = [
     "http://localhost",
     "http://localhost:8000",

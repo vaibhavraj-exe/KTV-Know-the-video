@@ -22,7 +22,7 @@ from nltk import word_tokenize
 # nltk.download('punkt')
 
 
-API_KEY = 'AIzaSyC1N29nzjJn-A6qMynPaF1nwIZWvYtLEjs'
+API_KEY = 'AIzaSyCgrJHa_8Kireh3wTy20SCsCWBxyU-7xjk'
 
 def get_video_id(video_url):   
     url = furl(video_url)
