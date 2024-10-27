@@ -96,7 +96,7 @@ const sendButton = document.getElementById('send-button')
     const currentUrl = tabs[0].url;
     console.log("currentUrl : ", currentUrl);
 
-    const apiUrl = "http://localhost:8000/initialize";
+    const apiUrl = "http://localhost:8001/initialize";
 
     const dataToSend = {
       video_url: currentUrl,
@@ -129,7 +129,7 @@ const sendButton = document.getElementById('send-button')
 
     const messageText = chatInput.value;
     if (messageText.trim() !== "") {
-      fetch('http://localhost:8000/chat', {
+      fetch('http://localhost:8001/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
